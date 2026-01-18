@@ -1,7 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kanaotoru/camera/camera.dart';
+import 'package:kanaotoru/camera/camera_view.dart';
 
 late List<CameraDescription> _cameras;
 
