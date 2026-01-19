@@ -10,7 +10,11 @@ class CameraBloc extends Bloc<CameraEvent, CameraState> {
   final List<CameraDescription> _cameras;
 
   CameraBloc(this._cameras) : super(CameraInitial()) {
-    controller = CameraController(_cameras[0], ResolutionPreset.max);
+    controller = CameraController(
+      _cameras[0],
+      ResolutionPreset.max,
+      enableAudio: false,
+    );
     on<CameraStartup>((event, emit) async {
       await controller.initialize().catchError((Object e) {
         if (e is CameraException) {
